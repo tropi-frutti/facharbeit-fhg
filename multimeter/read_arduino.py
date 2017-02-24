@@ -1,7 +1,17 @@
 import serial
 import globvar
+import logging
+
+logging.basicConfig(filename="log/multimeter.log",
+				level=logging.DEBUG,
+				)
+logger = logging.getLogger("read_arduino")
+
 
 def read():
+	"""
+	reads analog measured data via usb from a connected arduino
+	"""
 	global measure0
 	global measure1
 	global measure2
@@ -10,17 +20,24 @@ def read():
 	global measure5
 	global measure6
 	global measure7
-	
+		
 	ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
 	retry = True
-	while retry:
+	retries = 0
+
+	while retries < 5 :
 		line = ser.readline()
 		measures = line.split()
 		if len(measures) ==8:
-			print(measures[0])
-			globvar.measure0 =int(measures[0])
-			print(measures[1])
-			globvar.measure1 =int(measures[1])
+			try:
+				print(measures[0])
+				globvar.measure0 =int(measures[0])
+				print(measures[1])
+				globvar.measure1 =int(measures[1])
+				break
+			except ValueError:
+				# garbaged input will be ignored and retried
+				pass
 			
 	##		measure1 = measures[1]
 	##		measure2 = measures[2]
@@ -38,7 +55,12 @@ def read():
 ##			print(measure6)
 ##			print(measure7)
 			
-			retry=False
 		else:
 			print("wrong number of results")
 
+		retries = retries + 1
+	
+	if retries == 5:
+		msg = "no correct result after 5 tries"
+		logger.fatal(msg)
+		raise ValueError(msg)
