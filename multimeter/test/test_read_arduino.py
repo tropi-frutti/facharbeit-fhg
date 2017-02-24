@@ -7,7 +7,7 @@ import unittest.mock
 import read_arduino
 import globvar
 
-class Test(unittest.TestCase):
+class ReadArduinoTest(unittest.TestCase):
 
     def setUp(self):
         globvar.measure0 = 0
