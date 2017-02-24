@@ -1,0 +1,14 @@
+# requirements.txt used to identify used python modules
+#######################################################
+#
+#### for development ####
+pyserial
+
+#
+#### jenkins continuous integration ####
+nose2
+pylint
+
+#
+#### deployment ####
+paramiko
