@@ -1,4 +1,4 @@
 # facharbeit-fhg
 Multimessgerät mit Raspberry Pi und Arduino
 
-Eine Facharbeit von Emil, ...
+Eine Facharbeit von Emil und LuKas
