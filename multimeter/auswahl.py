@@ -5,9 +5,10 @@ import time
 import waehlen
 import spannung
 import widerstand
+import leistung
 import temperatur
 import globvar
-#import entfernung
+import entfernung
 ##import phwert
 
 
@@ -20,7 +21,7 @@ if run==True:
 		zeit=time.strftime("%d.%m.%Y %H:%M:%S")
 		titel2="Wiederholungen:"+str(waehlen.wdh)
 		titel3="Abstand:"+str(waehlen.abstand)
-		titel="Messung mit Dem Pi multimeter"+zeit
+		titel="Messung mit Dem Pi Multimeter "+zeit
 		messungen=[titel]
 		messungen.append(titel2)
 		messungen.append(titel3)
@@ -32,11 +33,12 @@ if run==True:
 			messungen.append("Widerstand in Ohm")
 		elif (waehlen.Auswahl == 4):
 			messungen.append("Temperatur in Celsius")
-			
 		elif (waehlen.Auswahl == 5):
 			messungen.append("Entfernung in Zentimetern")
+		elif (waehlen.Auswahl == 6):
+			messungen.append("leistung in Watt")
 				
-		##	elif (waehlen.Auswahl == 6):
+		##	elif (waehlen.Auswahl == 7):
 		##		messungen.append("pH-Wert"))
 				
 		else:
@@ -57,8 +59,10 @@ if run==True:
 			
 			elif (waehlen.Auswahl == 5):
 				messung=entfernung.distanz()
+			elif (waehlen.Auswahl == 6):
+				messung=leistung.leistung()
 				
-		##	elif (waehlen.Auswahl == 6):
+		##	elif (waehlen.Auswahl == 7):
 	#			messung=phwert.phwert()
 				
 			else:

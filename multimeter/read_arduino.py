@@ -1,11 +1,11 @@
 import serial
 import globvar
-import logging
+''import logging
 
 logging.basicConfig(filename="log/multimeter.log",
 				level=logging.DEBUG,
 				)
-logger = logging.getLogger("read_arduino")
+logger = logging.getLogger("read_arduino")''
 
 
 def read():

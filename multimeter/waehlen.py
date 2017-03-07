@@ -3,8 +3,9 @@ def auswahl():
 	print("2. Spannung")
 	print("3. Widerstand")
 	print("4. Temperatur")
-##	print("5. Entfernung")
-##	print("6. pH-Wert")
+	print("5. Entfernung")
+	print("6. Leistung")
+##	print("7. pH-Wert")
 	global Auswahl
 	Auswahl = int(input("Waehlen sie aus, was sie messen moechten:"))
 	return Auswahl
