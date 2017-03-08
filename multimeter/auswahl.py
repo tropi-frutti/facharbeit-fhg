@@ -62,11 +62,11 @@ if run==True:
 			elif (waehlen.Auswahl == 6):
 				messung=leistung.leistung()
 				
-		##	elif (waehlen.Auswahl == 7):
-	#			messung=phwert.phwert()
+##	elif (waehlen.Auswahl == 7):
+#			messung=phwert.phwert()
 				
 			else:
-##				print("Dies solllte eigentlich niemals erscheinen")
+				print("Dies solllte eigentlich niemals erscheinen")
 			
 			messungen.append(messung)
 			Durchgaenge=Durchgaenge+1
