@@ -66,7 +66,7 @@ if run==True:
 	#			messung=phwert.phwert()
 				
 			else:
-				print("Dies solllte eigentlich niemals erscheinen")
+##				print("Dies solllte eigentlich niemals erscheinen")
 			
 			messungen.append(messung)
 			Durchgaenge=Durchgaenge+1
