@@ -56,7 +56,7 @@ def read():
 ##			print(measure7)
 			
 		else:
-			print("wrong number of results")
+			print(".")
 
 		retries = retries + 1
 	
