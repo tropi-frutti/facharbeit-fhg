@@ -30,9 +30,9 @@ def read():
 		measures = line.split()
 		if len(measures) ==8:
 			try:
-				print(measures[0])
+				
 				globvar.measure0 =int(measures[0])
-				print(measures[1])
+				
 				globvar.measure1 =int(measures[1])
 				break
 			except ValueError:

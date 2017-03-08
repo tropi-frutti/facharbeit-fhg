@@ -67,7 +67,7 @@ if run==True:
 				
 			else:
 				print("Dies solllte eigentlich niemals erscheinen")
-			
+			print(messung)
 			messungen.append(messung)
 			Durchgaenge=Durchgaenge+1
 			time.sleep(abstand)
