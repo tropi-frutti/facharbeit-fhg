@@ -21,12 +21,13 @@ def read():
 	global measure6
 	global measure7
 		
-	ser = serial.Serial('COM6', 115200, timeout=1)
+	ser = serial.Serial('COM4', 9600, timeout=1)
 	retry = True
 	retries = 0
 
 	while retries < 5 :
 		line = ser.readline()
+		print(line)
 		measures = line.split()
 		if len(measures) ==8:
 			try:
