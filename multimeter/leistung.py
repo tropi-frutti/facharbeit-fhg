@@ -4,6 +4,7 @@ Created on 05.03.2017
 @author: emillokal
 '''
 import read_arduino
+import globvar
 
 def leistung():
     
