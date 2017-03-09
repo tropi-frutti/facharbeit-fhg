@@ -21,7 +21,7 @@ def read():
 	global measure6
 	global measure7
 		
-	ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
+	ser = serial.Serial('COM6', 115200, timeout=1)
 	retry = True
 	retries = 0
 
@@ -58,7 +58,7 @@ def read():
 		else:
 			##retryy!
 
-		retries = retries + 1
+			retries = retries + 1
 	
 	if retries == 5:
 		msg = "no correct result after 5 tries"
