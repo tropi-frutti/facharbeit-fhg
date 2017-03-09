@@ -62,5 +62,5 @@ def read():
 	
 	if retries == 5:
 		msg = "no correct result after 5 tries"
-		logger.fatal(msg)
+		##logger.fatal(msg)
 		raise ValueError(msg)
