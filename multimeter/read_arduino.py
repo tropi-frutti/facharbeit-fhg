@@ -21,7 +21,7 @@ def read():
 	global measure6
 	global measure7
 		
-	ser = serial.Serial('COM4', 9600, timeout=1)
+	ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
 	retry = True
 	retries = 0
 
