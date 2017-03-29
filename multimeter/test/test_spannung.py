@@ -15,7 +15,7 @@ class SpannungTest(unittest.TestCase):
     def testName(self, mock_read):
         globvar.measure0 = 500
         result = spannung.spannung()
-        self.assertAlmostEqual(result, 2.4437928)
+        self.assertAlmostEqual(result, 2.375366568914956)
 
 if __name__ == "__main__":
     unittest.main()
