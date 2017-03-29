@@ -6,16 +6,13 @@ def auswahl():
 	print("5. Entfernung")
 	print("6. Leistung")
 ##	print("7. pH-Wert")
-	global Auswahl
 	Auswahl = int(input("Waehlen sie aus, was sie messen moechten:"))
 	return Auswahl
 	
 def anzahlwdh():
-	global wdh
 	wdh=int(input("geben sie die anzahl an gewuenschten wiederholungen ein:"))
 	return wdh
 
 def abstandwdh():
-	global abstand
 	abstand=float(input("geben sie den abstand zwischen den messungen in Sekunden ein:"))
 	return abstand
