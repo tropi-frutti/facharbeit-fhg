@@ -9,7 +9,7 @@ def temperatur():
 		#Berechnung des Widerstandswert vom NTC
 	tempOhmREF =1100
 	Measure0=float(globvar.measure0)
-	tempSPAN =Measure0*0.004887585532746823 #umwandeln von 8 bit in spannungswert
+	tempSPAN =Measure0*4.86/1023 #umwandeln von 8 bit in spannungswert
 		#anwenden von u/(r1+r2)= u2/r2 umgewandelt zu r1=((u*r2)/u2)-r2
 	tempZS1 =5*tempOhmREF
 	tempZS2 =tempZS1/tempSPAN 

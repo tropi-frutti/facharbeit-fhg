@@ -6,6 +6,6 @@ def spannung():
 	
 	Measure0=globvar.measure0
 	
-	spannung=Measure0*0.004887585532746823  #umwandeln von 8 bit in spannungswert
+	spannung=Measure0*4.86/1023  #umwandeln von 8 bit in spannungswert
 
 	return spannung
