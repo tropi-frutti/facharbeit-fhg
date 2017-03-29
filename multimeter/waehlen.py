@@ -17,5 +17,5 @@ def anzahlwdh():
 
 def abstandwdh():
 	global abstand
-	abstand=int(input("geben sie den abstand zwischen den messungen in Sekunden ein:"))
+	abstand=float(input("geben sie den abstand zwischen den messungen in Sekunden ein:"))
 	return abstand
