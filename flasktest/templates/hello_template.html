@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Hello from Flask</title>
+{% if name %}
+  <h1>Hello {{ name }}! Nice to beet you. You taste like {{ flavour }}</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}
+
+<ul>
+{% for i in range(5) %}
+<li>{{ i }}</li>
+{% endfor %}
+</ul>
+
+<img src="{{ url_for('static', filename='tux-red_hair.png') }}" alt="Tux red hair"/>
